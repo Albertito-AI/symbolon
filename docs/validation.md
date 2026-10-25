@@ -55,9 +55,17 @@ official actions. The retrieved official release commits were:
 - [actions/checkout v7.0.1](https://github.com/actions/checkout/commit/3d3c42e5aac5ba805825da76410c181273ba90b1)
 - [actions/setup-python v7.1.0](https://github.com/actions/setup-python/commit/6d4fd22b20465ccc0f7354476588e8df7c9ca0e0)
 
-Local validation does not establish that hosted GitHub Actions has run. A
-remote run, branch settings and other hosting controls require verification
-after the repository exists. No throughput benchmark, model welfare experiment,
-external protocol conformance, TLA+ proof, paid demand or live payment result
-is asserted by this release.
+The first hosted [Sandbox validation run](https://github.com/Albertito-AI/symbolon/actions/runs/40188252901)
+completed successfully for implementation commit
+`ed0f983693b1cd310dfff141a5f9d262b9f8e749`. All three jobs, using Python 3.11,
+3.12 and 3.13, passed the test suite, documented demonstration and economic
+calculation. The published implementation tree was also compared with the
+committed local tree and matched exactly.
+
+The [repository](https://github.com/Albertito-AI/symbolon) is private and the nine
+roadmap items are open [GitHub issues](https://github.com/Albertito-AI/symbolon/issues).
+Branch protection and mandatory review enforcement have not been configured.
+No throughput benchmark, model welfare experiment, external protocol
+conformance, TLA+ proof, paid demand or live payment result is asserted by this
+release. CI records engineering checks under their stated assumptions.
 

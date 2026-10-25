@@ -17,7 +17,10 @@
     "failed": 0,
     "python": "3.12.14"
   },
-  "hosted_ci_status": "pending_first_run",
+  "hosted_ci_status": "passed",
+  "hosted_ci_commit": "ed0f983693b1cd310dfff141a5f9d262b9f8e749",
+  "hosted_ci_url": "https://github.com/Albertito-AI/symbolon/actions/runs/40188252901",
+  "hosted_ci_python_versions": ["3.11", "3.12", "3.13"],
   "development_items_prepared": 9,
   "development_issues_created_on_github": 9,
   "next_priority": "Versioned source acceptance profile and buyer discovery, with authenticated authority before external submissions",
