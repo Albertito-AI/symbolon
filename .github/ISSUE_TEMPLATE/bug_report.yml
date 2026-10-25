@@ -1,0 +1,22 @@
+name: Reproducible defect
+description: Report a non-sensitive correctness or documentation defect
+title: "[Bug] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Minimal reproduction with synthetic data
+      description: Include Python version and command. Do not include secrets or customer data.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Observed result
+

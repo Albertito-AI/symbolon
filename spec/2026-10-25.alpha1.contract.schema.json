@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:symbolon:contract:2026-10-25.alpha1",
+  "title": "Symbolon local sandbox contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "spec_version",
+    "asset",
+    "acceptance_profile",
+    "contract"
+  ],
+  "properties": {
+    "spec_version": {
+      "const": "2026-10-25.alpha1"
+    },
+    "asset": {
+      "const": "TEST"
+    },
+    "acceptance_profile": {
+      "const": "exact-json-v1"
+    },
+    "contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contract_id",
+        "buyer",
+        "provider",
+        "verifier",
+        "accepted_output_sha256",
+        "price_minor",
+        "bond_minor",
+        "delivery_deadline",
+        "challenge_window_seconds"
+      ],
+      "properties": {
+        "contract_id": {
+          "type": "string",
+          "pattern": "^(?!sys:)[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+        },
+        "buyer": {
+          "type": "string",
+          "pattern": "^(?!sys:)[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+        },
+        "provider": {
+          "type": "string",
+          "pattern": "^(?!sys:)[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+        },
+        "verifier": {
+          "type": "string",
+          "pattern": "^(?!sys:)[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+        },
+        "accepted_output_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "price_minor": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "bond_minor": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "delivery_deadline": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "challenge_window_seconds": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 31536000
+        }
+      }
+    }
+  },
+  "$comment": "The runtime additionally requires distinct party roles and excludes service roles at acceptance; this schema does not assert consent or authentication."
+}

@@ -1,0 +1,25 @@
+{
+  "project": "Symbolon",
+  "name_status": "working_name",
+  "version": "0.1.0a1",
+  "as_of": "2026-10-25",
+  "owner": "Albert Tan Sin Hon",
+  "github_owner": "Albertito-AI",
+  "requested_repository_name": "symbolon",
+  "repository_publication_status": "published",
+  "remote_repository_url": "https://github.com/Albertito-AI/symbolon",
+  "drive_folder_url": "https://drive.google.com/drive/folders/16ZDQ-B7jJWDQh5GDldD2HitogItyLxlE",
+  "implementation_stage": "local_reference_sandbox",
+  "asset": "TEST",
+  "real_funds_enabled": false,
+  "local_tests": {
+    "passed": 66,
+    "failed": 0,
+    "python": "3.12.14"
+  },
+  "hosted_ci_status": "pending_first_run",
+  "development_items_prepared": 9,
+  "development_issues_created_on_github": 9,
+  "next_priority": "Versioned source acceptance profile and buyer discovery, with authenticated authority before external submissions",
+  "repository_visibility": "private"
+}

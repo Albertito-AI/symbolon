@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "symbolon-sandbox"
+version = "0.1.0a1"
+description = "Experimental contract, verification and evidence core for machine work"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{name = "Albert Tan Sin Hon"}]
+dependencies = []
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Testing",
+]
+
+[project.scripts]
+symbolon = "symbolon.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

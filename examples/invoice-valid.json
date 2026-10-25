@@ -1,0 +1,12 @@
+{
+  "invoice_id": "INV-001",
+  "currency": "TEST",
+  "items": [
+    {
+      "line_id": "line-1",
+      "quantity": 2,
+      "unit_minor": 1500
+    }
+  ],
+  "total_minor": 3000
+}
