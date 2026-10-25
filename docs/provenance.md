@@ -1,8 +1,8 @@
 # Founding research and release provenance
 
 The founding input is the user-supplied `Clearing_Machine_Work_Agent_Marketplace_Report.docx`.
-The original has been retained unchanged in the project's Google Drive research
-folder. It is not included in the public-ready source tree.
+The original has been retained unchanged in the owner's private research
+archive. It is not included in the source tree.
 
 - Original SHA-256: `c26afd2f3372c3a8744b426b03fe19ac8a555f29b036df17aa87ec91b12db0e5`
 - Review date: 25 October 2026.
@@ -21,15 +21,13 @@ do not constitute an external security, legal or financial audit.
 
 ## Record locations
 
-Project folder:
-https://drive.google.com/drive/folders/16ZDQ-B7jJWDQh5GDldD2HitogItyLxlE
+The repository contains the implementation, reproducible checks, research
+references and dated development decisions. The owner's private project index
+locates the original report, working documents, commercial records and dated
+release snapshots. Those archive locations are not public navigation.
 
-`00_Project_Control` contains the project index and current status.
-`01_Research_and_Strategy` contains the original and enhanced reports and source audit.
-`02_Product_and_Technical` contains architecture and development documents.
-`03_Commercial_and_Legal` contains commercial, legal and economic analysis.
-`04_Test_Results_and_Releases` contains dated code snapshots and validation evidence.
-
-Version snapshots are deliberately dated. The project index identifies the
-current release and any publication or access task still outstanding.
+Version snapshots are deliberately dated. Use current repository documentation
+for implemented behaviour and the release record for the exact revision tested.
+Removing an archive link from the current tree does not remove it from earlier
+commits. Review the intended public history before changing visibility.
 

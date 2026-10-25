@@ -6,9 +6,8 @@
   "owner": "Albert Tan Sin Hon",
   "github_owner": "Albertito-AI",
   "requested_repository_name": "symbolon",
-  "repository_publication_status": "published",
+  "repository_publication_status": "created_private",
   "remote_repository_url": "https://github.com/Albertito-AI/symbolon",
-  "drive_folder_url": "https://drive.google.com/drive/folders/16ZDQ-B7jJWDQh5GDldD2HitogItyLxlE",
   "implementation_stage": "local_reference_sandbox",
   "asset": "TEST",
   "real_funds_enabled": false,
@@ -18,11 +17,29 @@
     "python": "3.12.14"
   },
   "hosted_ci_status": "passed",
-  "hosted_ci_commit": "ed0f983693b1cd310dfff141a5f9d262b9f8e749",
-  "hosted_ci_url": "https://github.com/Albertito-AI/symbolon/actions/runs/40188252901",
-  "hosted_ci_python_versions": ["3.11", "3.12", "3.13"],
+  "hosted_ci_commit": "7642dd2d6ad7a7bd45776f8e2c58c44ac124c406",
+  "hosted_ci_url": "https://github.com/Albertito-AI/symbolon/actions/runs/40188384075",
+  "hosted_ci_python_versions": [
+    "3.11",
+    "3.12",
+    "3.13"
+  ],
   "development_items_prepared": 9,
   "development_issues_created_on_github": 9,
   "next_priority": "Versioned source acceptance profile and buyer discovery, with authenticated authority before external submissions",
-  "repository_visibility": "private"
+  "repository_visibility": "private",
+  "public_release_status": "recommended_pending_release_gates_and_owner_decision",
+  "public_release_plan": "docs/public-release-plan.md",
+  "continuous_improvement": {
+    "status": "configured",
+    "daily_triage": true,
+    "deeper_review_day": "Tuesday",
+    "timezone": "Asia/Singapore",
+    "routine": "existing_portfolio_development",
+    "schedule_changed": false,
+    "duplicate_automation_created": false,
+    "process_document": "docs/continuous-improvement.md",
+    "record": "docs/improvement-log.json",
+    "scheduled_execution_evidence": "Configuration does not establish execution of a future review."
+  }
 }
