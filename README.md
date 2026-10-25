@@ -2,7 +2,7 @@
 
 **An experimental contract, verification and evidence core for machine work.**
 
-[Repository](https://github.com/Albertito-AI/symbolon) · [Development issues](https://github.com/Albertito-AI/symbolon/issues) · [Project records](https://drive.google.com/drive/folders/16ZDQ-B7jJWDQh5GDldD2HitogItyLxlE)
+[Repository](https://github.com/Albertito-AI/symbolon) · [Development issues](https://github.com/Albertito-AI/symbolon/issues) · [Documentation](#documentation)
 
 Symbolon explores how a business can specify a bounded task, record its delivery,
 check agreed acceptance conditions and retain an inspectable payment decision.
@@ -21,10 +21,16 @@ Requirements: Python 3.11 or later. There are no runtime or test dependencies
 outside the Python standard library.
 
 ```bash
+git clone https://github.com/Albertito-AI/symbolon.git
+cd symbolon
 PYTHONPATH=src python -m symbolon demo --output artifacts/first-run
 PYTHONPATH=src python -m unittest discover -s tests -v
 PYTHONPATH=src python -m symbolon economics
 ```
+
+The repository is currently private; cloning requires an account with access.
+The public release recommendation and its remaining gates are recorded in the
+[public release plan](docs/public-release-plan.md).
 
 On Windows PowerShell, first run `$env:PYTHONPATH = "src"`, then use the same
 `python -m ...` commands without the `PYTHONPATH=src` prefix. Alternatively,
@@ -112,9 +118,11 @@ The [roadmap](docs/roadmap.md) turns remaining work into reviewable issues.
 - [Economic model and limitations](docs/economics.md)
 - [Legal design questions](docs/legal-design.md)
 - [Commercial validation plan](docs/commercial-plan.md)
+- [Public release and market entry plan](docs/public-release-plan.md)
+- [Continuous improvement](docs/continuous-improvement.md) and [improvement log](docs/improvement-log.json)
 - [Roadmap](docs/roadmap.md) and [design decisions](docs/decisions.md)
 - [Release validation](docs/validation.md)
-- [Research provenance and project records](docs/provenance.md)
+- [Research provenance](docs/provenance.md)
 - [Contribution guide](CONTRIBUTING.md), [governance](GOVERNANCE.md) and [licence](LICENSE)
 
 **Project owner:** Albert Tan Sin Hon, GitHub `Albertito-AI`.
