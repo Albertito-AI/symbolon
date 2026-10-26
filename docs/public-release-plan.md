@@ -2,7 +2,9 @@
 
 Decision paper: 25 October 2026. Working name: Symbolon.
 
-**Recommendation: publish a carefully reviewed experimental core soon, then expand promotion as independent usage and measured customer value develop.** Aim for a modest public alpha in the next seven days if the publication gates are satisfied. The date is a planning target, subject to the existing development priorities. The repository remains private. This paper does not record a completed visibility change, public announcement, customer engagement or paid sale.
+**Publication status update, 26 October 2026:** The original [`Albertito-AI/symbolon`](https://github.com/Albertito-AI/symbolon) repository is public as an experimental reference implementation. Repository visibility is distinct from a tagged software release, hosted deployment, independent operator evaluation, or a paid customer engagement. The planning stages and their original 25 October context are retained below; remaining release and commercial gates still require their own evidence.
+
+**Recommendation: publish a carefully reviewed experimental core soon, then expand promotion as independent usage and measured customer value develop.** Aim for a modest public alpha in the next seven days if the publication gates are satisfied. The date is a planning target, subject to the existing development priorities. At the time of this 25 October decision paper, the repository remained private. That planning exercise did not itself record a visibility change, public announcement, customer engagement or paid sale.
 
 ## What should become public
 
