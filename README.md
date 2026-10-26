@@ -28,9 +28,9 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 PYTHONPATH=src python -m symbolon economics
 ```
 
-The repository is currently private; cloning requires an account with access.
-The public release recommendation and its remaining gates are recorded in the
-[public release plan](docs/public-release-plan.md).
+This public repository contains the experimental reference implementation.
+The [public release plan](docs/public-release-plan.md) records its development
+and staged launch approach.
 
 On Windows PowerShell, first run `$env:PYTHONPATH = "src"`, then use the same
 `python -m ...` commands without the `PYTHONPATH=src` prefix. Alternatively,
@@ -110,6 +110,23 @@ process. The [commercial plan](docs/commercial-plan.md) defines proposed gates
 for interviews, labelled cases, independent users, paid pilots and repeat work.
 The [roadmap](docs/roadmap.md) turns remaining work into reviewable issues.
 
+## Build Symbolon with us
+
+We welcome co-creators who want to improve how machine work is specified,
+checked and handed over. Start by reproducing the demonstration, reporting
+friction or discussing one bounded improvement:
+
+- [Reproducibility and the implementation matrix](https://github.com/Albertito-AI/symbolon/issues/9): check the quick start and connect requirements to code and meaningful tests.
+- [Versioned acceptance profiles](https://github.com/Albertito-AI/symbolon/issues/2): help define good, defective and indeterminate structured-data cases.
+- [Selective portable evidence](https://github.com/Albertito-AI/symbolon/issues/3): explore evidence that a recipient can inspect without receiving unrelated records.
+
+Use the existing issue before starting substantial work and read
+[CONTRIBUTING.md](CONTRIBUTING.md). Reviewed contributions retain their authorship,
+and release notes will credit the people who contributed to that release.
+We also welcome proposals for funded collaborations. Agree the scope, roles,
+intellectual-property arrangements, payment terms and support responsibilities
+in writing before starting paid work.
+
 ### Documentation
 
 - [Enhanced project report](docs/enhanced-report.md)
@@ -130,4 +147,5 @@ Symbolon is a working project name. Trademark clearance and commercial branding
 have not been completed. The reference implementation is licensed under
 Apache-2.0; no commercial service or financial commitment is created by this
 repository.
+
 

@@ -2,11 +2,11 @@
   "project": "Symbolon",
   "name_status": "working_name",
   "version": "0.1.0a1",
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "owner": "Albert Tan Sin Hon",
   "github_owner": "Albertito-AI",
   "requested_repository_name": "symbolon",
-  "repository_publication_status": "created_private",
+  "repository_publication_status": "public_experimental_repository",
   "remote_repository_url": "https://github.com/Albertito-AI/symbolon",
   "implementation_stage": "local_reference_sandbox",
   "asset": "TEST",
@@ -27,8 +27,8 @@
   "development_items_prepared": 9,
   "development_issues_created_on_github": 9,
   "next_priority": "Versioned source acceptance profile and buyer discovery, with authenticated authority before external submissions",
-  "repository_visibility": "private",
-  "public_release_status": "recommended_pending_release_gates_and_owner_decision",
+  "repository_visibility": "public",
+  "public_release_status": "public_repository_experimental_reference",
   "public_release_plan": "docs/public-release-plan.md",
   "continuous_improvement": {
     "status": "configured",
@@ -41,5 +41,7 @@
     "process_document": "docs/continuous-improvement.md",
     "record": "docs/improvement-log.json",
     "scheduled_execution_evidence": "Configuration does not establish execution of a future review."
-  }
+  },
+  "owner_publication_authorisation_date": "2026-10-26"
 }
+

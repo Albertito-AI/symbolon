@@ -9,10 +9,9 @@ and hash chains do not protect against an administrator rewriting both records
 and checkpoints. Evidence exports include the complete demonstration journal;
 use only synthetic data until per-contract disclosure has been implemented.
 
-For a defect with exploit details, use GitHub's private vulnerability reporting
-if that feature is enabled on the repository. If it is unavailable, open an issue
-requesting a private contact route without including exploit details, credentials
-or private data. Do not claim a bounty or guaranteed response time; neither has
+Private vulnerability reporting is enabled. For a defect with exploit details,
+use the repository's Security tab and Report a vulnerability to report privately.
+Keep exploit details, credentials and private data out of public issues. Do not claim a bounty or guaranteed response time; neither has
 been established. Non-sensitive correctness issues can be filed publicly.
 
 Known development requirements include authenticated authority, verifier timeouts,
