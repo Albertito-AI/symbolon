@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="480" viewBox="0 0 1120 480" role="img" aria-labelledby="title description">
+<title id="title">Symbolon: two invoice deliveries produce different TEST-only decisions</title>
+<desc id="description">A delivered total of 3000 passes and reaches SETTLED after the challenge window. A total of 3999 fails, enters dispute and is explicitly RESOLVED by refunding price and returning bond. No real money moves.</desc>
+<rect x="0" y="0" width="1120" height="480" rx="18" fill="#0b1523"/>
+<text x="42" y="35" fill="#79ddc3" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">SYMBOLON / EXECUTED SYNTHETIC DEMO</text>
+<text x="42" y="78" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700">Check the delivery. Inspect the resulting decision.</text>
+<text x="42" y="112" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400">Reference invoice: 2 × 1,500 = 3,000 TEST minor units</text>
+<text x="60" y="166" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">DELIVERED TOTAL</text>
+<text x="362" y="166" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">ACCEPTANCE CHECK</text>
+<text x="688" y="166" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">RECORDED SANDBOX OUTCOME</text>
+<rect x="42" y="188" width="1036" height="88" rx="10" fill="#122338"/>
+<text x="60" y="226" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">3,000</text>
+<text x="60" y="255" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400">total_minor</text>
+<text x="362" y="233" fill="#79ddc3" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">PASS</text>
+<text x="688" y="223" fill="#79ddc3" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">SETTLED</text>
+<text x="688" y="253" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">After the challenge window; TEST only</text>
+<rect x="42" y="294" width="1036" height="88" rx="10" fill="#122338"/>
+<text x="60" y="332" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">3,999</text>
+<text x="60" y="361" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400">total_minor</text>
+<text x="362" y="339" fill="#f5c574" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">FAIL → dispute</text>
+<text x="688" y="329" fill="#f5c574" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">RESOLVED</text>
+<text x="688" y="359" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">Explicit refund of price; bond returned</text>
+<text x="42" y="420" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400">10 balanced journal entries · 20 postings · real_money_moved: false</text>
+<text x="42" y="454" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400">Observed-output illustration. These checks do not verify invoice truth or authorship.</text>
+</svg>
