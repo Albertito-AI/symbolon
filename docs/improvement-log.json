@@ -13,7 +13,11 @@
         "commit": "7642dd2d6ad7a7bd45776f8e2c58c44ac124c406",
         "ci_url": "https://github.com/Albertito-AI/symbolon/actions/runs/40188384075",
         "local_tests_passed": 66,
-        "hosted_python_versions": ["3.11", "3.12", "3.13"],
+        "hosted_python_versions": [
+          "3.11",
+          "3.12",
+          "3.13"
+        ],
         "visibility": "private",
         "independent_customer_adoption": "unmeasured",
         "customer_savings": "unmeasured",
@@ -56,6 +60,38 @@
         "A source-control cleanup does not remove material from historical commits.",
         "The plan's timelines and thresholds are chosen experiments, not forecasts.",
         "No revenue, customer savings or independent human usage is inferred from configuration or AI review."
+      ]
+    },
+    {
+      "id": "2026-10-28-software-citation",
+      "date": "2026-10-28",
+      "origin": "interactive_owner_request",
+      "kind": "research_software_citation_metadata",
+      "status": "documented",
+      "problem": "Readers need machine-readable authorship and version metadata when citing the Symbolon research sandbox.",
+      "baseline": {
+        "commit": "dd7a85c0d5428f05f5803464ed2747cf9b75a4c4",
+        "citation_file_present": false
+      },
+      "changes": [
+        "Added CITATION.cff using the existing software author, declared version, repository URL and verified ORCID.",
+        "Retained the synthetic research scope and existing Apache-2.0 licence."
+      ],
+      "sources": [
+        "../pyproject.toml",
+        "../README.md",
+        "https://github.com/Albertito-AI/policykit/blob/130cf41b0d59e1f72a238b0cf3c145c6ca337265/CITATION.cff",
+        "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files"
+      ],
+      "verification": {
+        "implementation_changed": false,
+        "new_unit_tests_added": false,
+        "reason": "Metadata change. Existing Sandbox validation checks cover the unchanged implementation; their results are recorded on the associated pull request."
+      },
+      "decision": "retain_citation_metadata",
+      "next_step": "Keep citation metadata aligned with future software versions.",
+      "known_limits": [
+        "This metadata adds no DOI, software release, independent review or evidence of adoption."
       ]
     }
   ]
