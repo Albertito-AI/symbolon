@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "source_commit": "cc60a5de595b5f9a560a26dcca3dbe139b76ee0d",
+  "source_url": "https://github.com/Albertito-AI/symbolon/tree/cc60a5de595b5f9a560a26dcca3dbe139b76ee0d",
+  "recorded_date": "2026-10-28",
+  "synthetic": true,
+  "runtime": "CPython 3.12.14 on Linux x86_64",
+  "executed_command": "PYTHONPATH=src python -m symbolon demo --output <temporary-directory>",
+  "path_note": "The temporary output path is omitted; all displayed domain results are retained unchanged.",
+  "exit_status": 0,
+  "observed_stdout": {
+    "environment": "local sandbox",
+    "asset": "TEST",
+    "real_money_moved": false,
+    "contracts": [
+      {
+        "contract_id": "task-accepted",
+        "state": "SETTLED",
+        "acceptance_checks_passed": true,
+        "evidence_sha256": "bd5891793eda0d9a5577912aceb87d899336c97e6954ea594932e15d121fa420",
+        "snapshot_integrity": {
+          "checkpoint_matches": true,
+          "output_matches_delivery": true,
+          "event_chain_valid": true,
+          "event_state_consistent": true,
+          "ledger_chain_valid": true,
+          "contract_transfers_match": true,
+          "invoice_profile_passed": true,
+          "contract_state": "SETTLED",
+          "authorship_verified": false,
+          "semantic_correctness_verified": false
+        }
+      },
+      {
+        "contract_id": "task-disputed",
+        "state": "RESOLVED",
+        "acceptance_checks_passed": false,
+        "evidence_sha256": "67309131f92ba8c39eb8eddb2d85fe339c258b4c7570e2f8a2998d3a25d824b2",
+        "snapshot_integrity": {
+          "checkpoint_matches": true,
+          "output_matches_delivery": true,
+          "event_chain_valid": true,
+          "event_state_consistent": true,
+          "ledger_chain_valid": true,
+          "contract_transfers_match": true,
+          "invoice_profile_passed": false,
+          "contract_state": "RESOLVED",
+          "authorship_verified": false,
+          "semantic_correctness_verified": false
+        }
+      }
+    ],
+    "ledger": {
+      "valid": true,
+      "currency": "TEST",
+      "journal_entries": 10,
+      "total_postings": 20,
+      "sum_balances": 0,
+      "head_hash": "b0ac918e4fc82de8ef1357fe3d3bad8ea101dfea315c8fe1c396dcace38e7b07"
+    },
+    "balances_minor": {
+      "buyer-demo": 96000,
+      "provider-demo": 104000
+    }
+  },
+  "verifier_stdout": [
+    {
+      "checkpoint_matches": true,
+      "output_matches_delivery": true,
+      "event_chain_valid": true,
+      "event_state_consistent": true,
+      "ledger_chain_valid": true,
+      "contract_transfers_match": true,
+      "invoice_profile_passed": true,
+      "contract_state": "SETTLED",
+      "authorship_verified": false,
+      "semantic_correctness_verified": false
+    },
+    {
+      "checkpoint_matches": true,
+      "output_matches_delivery": true,
+      "event_chain_valid": true,
+      "event_state_consistent": true,
+      "ledger_chain_valid": true,
+      "contract_transfers_match": true,
+      "invoice_profile_passed": false,
+      "contract_state": "RESOLVED",
+      "authorship_verified": false,
+      "semantic_correctness_verified": false
+    }
+  ],
+  "generated_files": [],
+  "visual": "preview.svg is a static illustration of observed output, not a screenshot.",
+  "no_new_provider_calls_or_customer_data": true
+}

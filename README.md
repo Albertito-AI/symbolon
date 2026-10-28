@@ -15,6 +15,27 @@ marketplace. The [enhanced report](docs/enhanced-report.md) develops the product
 and commercial case. The [source audit](docs/source-audit.md) records corrections
 to the founding research and bounds what the evidence establishes.
 
+## See it in action
+
+Give Symbolon two synthetic invoice deliveries: one with the expected total of
+3,000 and one with an incorrect total of 3,999. It checks the fixed reference,
+records the different contract paths, and exports replayable evidence.
+
+![Observed Symbolon demo: total 3000 passes and settles in TEST units; total 3999 fails and is explicitly resolved by refund.](docs/demo/preview.svg)
+
+The illustration summarises an executed local run. `SETTLED` and `RESOLVED` are
+sandbox states using non-redeemable **TEST** units. No real money moves, and a
+passing check does not establish that an invoice is genuine or legally owed.
+
+From the repository root with Python 3.11 or later, choose a new output directory:
+
+```sh
+PYTHONPATH=src python -m symbolon demo --output artifacts/readme-demo
+```
+
+[Recorded output, input references and evidence checks](docs/demo/README.md)
+show what was actually observed and how to reproduce it.
+
 ## Run the demonstration
 
 Requirements: Python 3.11 or later. There are no runtime or test dependencies
