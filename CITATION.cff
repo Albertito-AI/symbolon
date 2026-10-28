@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the version or commit of the Symbolon research sandbox that you actually use. Citation metadata does not establish production deployment, real payment capability or commercial validation."
+type: software
+title: "Symbolon"
+authors:
+  - family-names: "Tan"
+    given-names: "Sin Hon Albert"
+    orcid: "https://orcid.org/0009-0001-8996-7933"
+version: "0.1.0a1"
+repository-code: "https://github.com/Albertito-AI/symbolon"
+url: "https://github.com/Albertito-AI/symbolon"
+license: "Apache-2.0"
+abstract: "An experimental contract, verification and evidence core for machine work. The local reference implementation uses synthetic TEST units, fixed invoice acceptance examples and replayable evidence; it does not move real money or establish that an invoice is genuine or legally owed."
