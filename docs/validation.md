@@ -2,6 +2,14 @@
 
 Validation date: 25 October 2026. Version: 0.1.0a1.
 
+**Status checked 30 October 2026:** The repository is publicly visible and
+[its 28 October main-branch CI](https://github.com/Albertito-AI/symbolon/actions/runs/40701728696)
+completed successfully on Python 3.11, 3.12 and 3.13 at commit
+`43a4d7561d4e8df488902da19e979ddaebc63d38`. This is a newer, separate
+engineering observation; the detailed local results below remain dated to
+25 October. No tagged formal release, authenticated operator, live payment or
+independent customer-use result was established by these checks.
+
 ## Local results
 
 The full local suite passed **66 tests** using the documented command:
@@ -62,8 +70,10 @@ completed successfully for implementation commit
 calculation. The published implementation tree was also compared with the
 committed local tree and matched exactly.
 
-The [repository](https://github.com/Albertito-AI/symbolon) is private and the nine
-roadmap items are open [GitHub issues](https://github.com/Albertito-AI/symbolon/issues).
+At the 25 October validation date, the [repository](https://github.com/Albertito-AI/symbolon)
+was private. It became public on 26 October 2026; this is a repository-visibility
+change, not a tagged software release or independent validation. The nine roadmap
+items were recorded as open [GitHub issues](https://github.com/Albertito-AI/symbolon/issues).
 Branch protection and mandatory review enforcement have not been configured.
 No throughput benchmark, model welfare experiment, external protocol
 conformance, TLA+ proof, paid demand or live payment result is asserted by this
