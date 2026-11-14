@@ -40,3 +40,76 @@ jobs:
         env:
           PYTHONPATH: src
         run: python -m symbolon economics
+      - name: Verify installed wheel outside source
+        timeout-minutes: 5
+        shell: bash
+        run: |
+          set -euo pipefail
+          unset PYTHONPATH PYTHONHOME
+          SYMBOLON_SMOKE_ROOT="$(mktemp -d "$RUNNER_TEMP/symbolon-smoke.XXXXXX")"
+          export SYMBOLON_SMOKE_ROOT
+          python -I -m venv "$SYMBOLON_SMOKE_ROOT/build-env"
+          cat > "$SYMBOLON_SMOKE_ROOT/backend.txt" <<'REQ'
+          setuptools==84.2.1 --hash=sha256:ca140b45d5325a9478f880e351484f62fef15f336462e449ca0c03c873d589c2
+          REQ
+          # Hash from https://pypi.org/project/setuptools/84.2.1/#files
+          "$SYMBOLON_SMOKE_ROOT/build-env/bin/python" -I -m pip --isolated --disable-pip-version-check install --index-url https://pypi.org/simple --only-binary=:all: --no-deps --require-hashes --no-cache-dir -r "$SYMBOLON_SMOKE_ROOT/backend.txt"
+          "$SYMBOLON_SMOKE_ROOT/build-env/bin/python" -I -c 'import importlib.metadata as m; print({name: m.version(name) for name in ("pip", "setuptools")})'
+          mkdir "$SYMBOLON_SMOKE_ROOT/source" "$SYMBOLON_SMOKE_ROOT/dist" "$SYMBOLON_SMOKE_ROOT/outside"
+          git archive HEAD | tar -x -C "$SYMBOLON_SMOKE_ROOT/source"
+          "$SYMBOLON_SMOKE_ROOT/build-env/bin/python" -I -m pip --isolated --disable-pip-version-check wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir "$SYMBOLON_SMOKE_ROOT/dist" "$SYMBOLON_SMOKE_ROOT/source"
+          wheels=("$SYMBOLON_SMOKE_ROOT"/dist/*.whl)
+          test "${#wheels[@]}" -eq 1
+          test -f "${wheels[0]}"
+          python -I -m venv "$SYMBOLON_SMOKE_ROOT/runtime-env"
+          "$SYMBOLON_SMOKE_ROOT/runtime-env/bin/python" -I -m pip --isolated --disable-pip-version-check install --no-index --no-deps "${wheels[0]}"
+          cd "$SYMBOLON_SMOKE_ROOT/outside"
+          "$SYMBOLON_SMOKE_ROOT/runtime-env/bin/symbolon" demo --output demo > summary.json
+          "$SYMBOLON_SMOKE_ROOT/runtime-env/bin/python" -I -m symbolon economics > economics.json
+          "$SYMBOLON_SMOKE_ROOT/runtime-env/bin/python" -I - <<'PY'
+          import importlib.metadata as metadata
+          import json
+          import os
+          from pathlib import Path
+          import sys
+          import sysconfig
+          import tomllib
+          import zipfile
+          import symbolon
+          
+          root = Path(os.environ['SYMBOLON_SMOKE_ROOT'])
+          project = tomllib.loads((root / 'source/pyproject.toml').read_text())['project']
+          module = Path(symbolon.__file__).resolve()
+          prefix = Path(sys.prefix).resolve()
+          site_roots = {Path(sysconfig.get_path(key)).resolve() for key in ('purelib', 'platlib')}
+          assert all(site.is_relative_to(prefix) for site in site_roots)
+          assert any(module.is_relative_to(site) for site in site_roots), module
+          assert metadata.version(project['name']) == project['version']
+          assert not metadata.requires(project['name'])
+          wheel, = (root / 'dist').glob('*.whl')
+          with zipfile.ZipFile(wheel) as archive:
+              names = archive.namelist()
+              assert any(name.endswith('/licenses/LICENSE') for name in names)
+              assert any(name.endswith('/licenses/NOTICE') for name in names)
+          summary = json.loads(Path('summary.json').read_text())
+          assert summary['asset'] == 'TEST'
+          assert summary['real_money_moved'] is False
+          accepted, disputed = summary['contracts']
+          assert (accepted['state'], disputed['state']) == ('SETTLED', 'RESOLVED')
+          assert accepted['acceptance_checks_passed'] is True
+          assert disputed['acceptance_checks_passed'] is False
+          for contract in (accepted, disputed):
+              checks = contract['snapshot_integrity']
+              for key in ('checkpoint_matches', 'output_matches_delivery', 'event_chain_valid', 'event_state_consistent', 'ledger_chain_valid', 'contract_transfers_match'):
+                  assert checks[key] is True, key
+              assert checks['authorship_verified'] is False
+              assert checks['semantic_correctness_verified'] is False
+          assert accepted['snapshot_integrity']['invoice_profile_passed'] is True
+          assert disputed['snapshot_integrity']['invoice_profile_passed'] is False
+          assert summary['ledger']['valid'] is True
+          assert summary['ledger']['sum_balances'] == 0
+          assert summary['ledger']['journal_entries'] == 10
+          assert summary['ledger']['total_postings'] == 20
+          assert json.loads(Path('economics.json').read_text())['status'] == 'illustrative_model_only'
+          print({'installed_version': metadata.version(project['name']), 'module': str(module), 'python': sys.version, 'result': 'passed'})
+          PY
