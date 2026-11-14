@@ -153,6 +153,7 @@ in writing before starting paid work.
 - [Enhanced project report](docs/enhanced-report.md)
 - [Source audit and primary references](docs/source-audit.md)
 - [Architecture and evidence format](docs/architecture.md)
+- [Implementation and test coverage](docs/conformance-matrix.md)
 - [Economic model and limitations](docs/economics.md)
 - [Legal design questions](docs/legal-design.md)
 - [Commercial validation plan](docs/commercial-plan.md)
