@@ -7,10 +7,11 @@ rights and visibility remain unchanged.
 
 ## Publication state
 
-At preparation, the Wiki had not been verified as initialised. A committed file
-is not proof that a Wiki page is live. GitHub requires a first Wiki page before
-ordinary Git publication: [create that page](https://github.com/Albertito-AI/symbolon/wiki/_new).
-Use the title `Home`, add a short welcome and save.
+On 15 November 2026, anonymous retrieval of the separate [live Wiki](https://github.com/Albertito-AI/symbolon/wiki) succeeded at Wiki commit `a52f1cd1521f71867e01543a7ac5b80a8949aefb`. Its `Whitepaper.md` was byte-identical to the committed source at `007a8f3cadfec5700ed52db967b90ad9c6597f85`. The managed Home section also matched; the Wiki retained its surrounding welcome text. This is a dated publication receipt, not a promise that later source or Wiki edits have already propagated.
+
+The 15 November scholarly revision must receive a separate successful publication check after merge. A local candidate or repository commit alone does not prove that the live page has updated. The earlier preparation note that initialisation was unverified is historical and no longer describes this observed baseline.
+
+Edit the versioned source for ordinary updates. Only if a later publication reports `BLOCKED_UNINITIALISED` and inspection confirms the Wiki has no first page should a maintainer [create a Home page](https://github.com/Albertito-AI/symbolon/wiki/_new). Do not recreate or overwrite an existing Home page to resolve unrelated authentication, conflict or publishing failures.
 
 The `Publish project whitepaper to Wiki` workflow runs after that initial Wiki
 edit and after later source changes. It uses the repository-scoped workflow token.
