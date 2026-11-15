@@ -82,6 +82,37 @@ Retain that limitation rather than adding an administrative PAT just to change
 a score. Review individual findings against the project's actual requirements;
 do not add artificial contributors, releases or settings changes for points.
 
+## Maintenance and archive boundaries
+
+The maintenance caller and dated archive workflow deny token permissions by
+default. Their existing jobs declare the access each operation needs:
+
+| Job | Token scopes | Purpose |
+| --- | --- | --- |
+| Maintenance | `contents: read`, `actions: write`, `issues: write` | Check out source, retry eligible failed runs and maintain the remediation issue. |
+| Dated archive | `contents: write` | Read the existing archive release or create the already-authorised dated snapshot when absent. |
+
+This limits permission inheritance by future jobs. It preserves the necessary
+scopes of the current jobs; Scorecard can still flag those writes. The
+[GitHub permission rules](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#permissions)
+and [reusable-workflow rules](https://docs.github.com/en/actions/reference/workflows-and-actions/reusing-workflow-configurations#supported-keywords-for-jobs-that-call-a-reusable-workflow)
+describe these boundaries.
+
+The maintenance caller pins its shared workflow to the reviewed
+[commit `e80498f303a515353dc5678941a727e0e473cbde`](https://github.com/Albertito-AI/Albertito-AI/blob/e80498f303a515353dc5678941a727e0e473cbde/.github/workflows/atlas-flexible-zero-fail.yml),
+the same definition used by successful [run 43672524624](https://github.com/Albertito-AI/symbolon/actions/runs/43672524624).
+Changes to that repository's `main` branch no longer replace the called
+definition automatically. Review the shared workflow and its dependencies,
+preserve the required permissions, and verify a native maintenance run when
+updating this pin. The shared workflow still checks out the caller's source;
+the pin does not freeze Symbolon, hosted runners or every transitive dependency.
+The existing maintenance schedule and monthly Dependabot configuration remain.
+
+Editing the archive workflow itself triggers its main-branch job. Its existing
+release check must retain `archive-2026-11-13` when present. Verify the actual
+job log and unchanged release/tag identity after such edits; a green job alone
+does not prove that no release was created or replaced.
+
 ## Sources and reversal
 
 The reviewed upstream sources are the stable action's
