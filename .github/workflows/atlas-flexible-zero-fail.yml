@@ -7,10 +7,7 @@ on:
     - cron: '23 1 * * *'
   workflow_dispatch:
 
-permissions:
-  contents: read
-  actions: write
-  issues: write
+permissions: {}
 
 jobs:
   atlas-zero-fail:
@@ -18,4 +15,4 @@ jobs:
       contents: read
       actions: write
       issues: write
-    uses: Albertito-AI/Albertito-AI/.github/workflows/atlas-flexible-zero-fail.yml@main
+    uses: Albertito-AI/Albertito-AI/.github/workflows/atlas-flexible-zero-fail.yml@e80498f303a515353dc5678941a727e0e473cbde
