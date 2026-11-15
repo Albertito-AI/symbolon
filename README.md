@@ -2,6 +2,12 @@
 
 **An experimental contract, verification and evidence core for machine work.**
 
+[![Sandbox validation](https://github.com/Albertito-AI/symbolon/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/Albertito-AI/symbolon/actions/workflows/ci.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Albertito-AI/symbolon/badge)](https://scorecard.dev/viewer/?uri=github.com/Albertito-AI/symbolon)
+
+These automated reports describe tested behaviour and repository practices,
+not production or security certification. [Check scope and freshness](docs/security-checks.md).
+
 [Repository](https://github.com/Albertito-AI/symbolon) · [Development issues](https://github.com/Albertito-AI/symbolon/issues) · [Documentation](#documentation)
 
 Symbolon explores how a business can specify a bounded task, record its delivery,
